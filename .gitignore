@@ -1,0 +1,42 @@
+# Dependencies and generated output
+/node_modules
+/.next
+coverage/
+*.tsbuildinfo
+*.log
+*.pid
+
+# Local environment and secrets (keep only the documented template)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Financial databases, backups and imported/exported personal data
+/data/
+/backups/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+finance-backup-*.json
+finance-export-*.json
+*.xlsx
+*.xls
+*.csv
+*.tsv
+
+# One-off private migration seed retained only on the owner's Mac
+scripts/seed-personal.ts
+src/lib/seeds/personal.ts
+src/lib/seeds/private-*.ts
+
+# Local screenshots and macOS metadata
+/image.png
+/screenshots-private/
+.DS_Store
+.AppleDouble
+.LSOverride

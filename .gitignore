@@ -1,10 +1,13 @@
 # Dependencies and generated output
 /node_modules
+/apps/web/node_modules/
 /.next
+/apps/web/dist/
 coverage/
 *.tsbuildinfo
 *.log
 *.pid
+cont.txt
 
 # Local environment and secrets (keep only the documented template)
 .env
@@ -36,6 +39,8 @@ src/lib/seeds/private-*.ts
 
 # Local screenshots and macOS metadata
 /image.png
+/homepage.png
+/*.mov
 /screenshots-private/
 .DS_Store
 .AppleDouble

@@ -1,18 +1,39 @@
 {
-  "name": "prumo-financas",
-  "version": "1.0.0",
+  "name": "prumo",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Tracker local e privado de património pessoal.",
+  "description": "Private, local-first net worth tracking in the browser or with SQLite.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fialho14/patrimonio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fialho14/patrimonio/issues"
+  },
+  "homepage": "https://github.com/Fialho14/patrimonio#readme",
+  "keywords": [
+    "local-first",
+    "net-worth",
+    "privacy",
+    "sqlite",
+    "spreadsheet"
+  ],
   "scripts": {
     "dev": "next dev --webpack --hostname 127.0.0.1",
     "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1",
+    "web:dev": "vite --config apps/web/vite.config.ts",
+    "web:build": "vite build --config apps/web/vite.config.ts",
+    "web:preview": "vite preview --config apps/web/vite.config.ts --host 127.0.0.1",
+    "web:test": "vitest run --config apps/web/vitest.config.ts",
     "finance": "node scripts/finance.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run web:test && npm run web:build && npm run build",
     "db:migrate": "node --import tsx scripts/migrate.ts",
     "db:seed:demo": "node --import tsx scripts/seed-demo.ts"
   },
@@ -34,6 +55,7 @@
     "eslint-config-next": "16.3.2",
     "tsx": "4.23.12",
     "typescript": "5.9.3",
+    "vite": "8.2.2",
     "vitest": "4.1.11"
   },
   "engines": {

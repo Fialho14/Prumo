@@ -1,0 +1,64 @@
+name: Product suggestion
+description: Suggest a focused improvement that fits Prumo's local-first scope.
+title: "[Suggestion]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prumo is intentionally a snapshot-based, local-first net worth tracker. It does not plan to add accounts, bank connections, transaction tracking, budgeting, cloud sync, multi-user access, analytics, ads, subscriptions, or AI advice.
+
+        Read `docs/product-decisions.md` before proposing a significant change. Never include real financial data.
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Area
+      options:
+        - Shared product or domain logic
+        - Prumo Web
+        - Prumo Local
+        - Documentation or open-source experience
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What user problem does this solve?
+      description: Describe the job or friction before describing an implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Keep the proposal narrow and explain the user-visible result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fit
+    attributes:
+      label: Why does it fit Prumo?
+      description: Explain how it protects simplicity, privacy, local ownership, and portability.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs and alternatives
+      description: What complexity or privacy surface would this add, and what simpler options were considered?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This proposal does not require accounts, bank APIs, transaction tracking, budgeting, cloud sync, analytics, ads, subscriptions, multi-user access, or remote financial storage.
+          required: true
+        - label: I have not included real financial or identifying data.
+          required: true

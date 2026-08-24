@@ -5,5 +5,11 @@ import nextTs from "eslint-config-next/typescript";
 export default defineConfig([
   ...nextVitals,
   ...nextTs,
-  globalIgnores([".next/**", "coverage/**", "data/**", "backups/**"]),
+  {
+    files: ["apps/web/**/*.{ts,tsx}"],
+    rules: {
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
+  globalIgnores([".next/**", "apps/web/dist/**", "coverage/**", "data/**", "backups/**"]),
 ]);

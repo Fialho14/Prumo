@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 64" role="img" aria-labelledby="title">
+  <title id="title">Prumo</title>
+  <rect width="64" height="64" rx="19" fill="#111815"/>
+  <path d="M32 11v23" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="32" cy="12" r="3.6" fill="#fff"/>
+  <path d="m23.5 37 8.5-12 8.5 12L32 51 23.5 37Z" fill="#fff"/>
+  <path d="M27.5 37h9" stroke="#111815" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+  <text x="82" y="44" fill="#111815" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="39" font-weight="700" letter-spacing="-1.8">Prumo</text>
+</svg>

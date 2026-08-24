@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "release": "v0.1.0-rc",
+  "date": "2026-08-24",
+  "artifact": "apps/web/dist",
+  "browser": "Headless Chromium 151.0.0.0",
+  "captureTool": "agent-browser 0.34.0",
+  "continuousProductionRun": {
+    "scenarios": [
+      "initial-load",
+      "xlsx-preview",
+      "indexeddb-confirm",
+      "xlsx-export",
+      "csv-export",
+      "json-export",
+      "reload"
+    ],
+    "requests": 9,
+    "methods": {
+      "GET": 9
+    },
+    "requestBodies": 0,
+    "crossOriginRequests": 0,
+    "webSockets": 0,
+    "observedClasses": [
+      "document",
+      "javascript",
+      "stylesheet",
+      "favicon",
+      "lazy-xlsx-parser"
+    ],
+    "fixtureMarkerPresentInCapture": false,
+    "auditedAmountsPresentInCapture": false
+  },
+  "isolatedRuns": {
+    "coldXlsxImport": {
+      "requests": 1,
+      "classification": "same-origin lazy JavaScript chunk GET",
+      "requestBodies": 0,
+      "fixtureMarkerPresentInCapture": false
+    },
+    "csvImportAfterStaticLoad": {
+      "requests": 0,
+      "requestBodies": 0,
+      "fixtureMarkerPresentInCapture": false
+    }
+  },
+  "fixtures": {
+    "csvSha256": "76dbb8fdd8169c464c4367589b2291663cc376ce9639640e2af33434d2e88091",
+    "xlsxSha256": "1feebccefe13313ea907e7d013424a3b461021c52a26c32988188b731b62b5cb",
+    "marker": "PRUMO_NETWORK_AUDIT_7F3A9C"
+  },
+  "result": "pass",
+  "publicOriginRepeatRequiredBeforeRelease": true
+}
